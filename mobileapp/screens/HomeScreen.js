@@ -15,7 +15,7 @@ import { MonoText } from '../components/StyledText';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    header: null, null,
+    header: null,
   };
 
   render() {
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
 
   },
     textWhite:{
-        color: '#FFE',
+        color: '#FFF',
     },
 
   welcomeImage: {

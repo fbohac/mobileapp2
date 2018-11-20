@@ -27,15 +27,13 @@ export default class HomeScreen extends React.Component {
                             source={  require('../assets/images/uvodMA.png')}
                             style={styles.welcomeImage}
                         />
-                        <Text style={styles.textWhite}>Menu</Text>
-                        <Button
-                            title="Encyklopedia"
-                            onPress={() => this.props.navigation.navigate('Encyklopedia')}
-                        />
-                        <Button
-                            title="Kurz"
-                            onPress={() => this.props.navigation.navigate('Kurz')}
-                        />
+                        <Text style={styles.textWhite}>Menu Menu</Text>
+                        <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Encyklopedia')}>
+                            <Image source={require("./assets/encyklopedia_button.png")}/>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Kurz')}>
+                            <Image source={require("./assets/kurz_button.png")}/>
+                        </TouchableOpacity>
                     </View>
                 </ScrollView>
             </View>
