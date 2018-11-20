@@ -29,7 +29,7 @@ export default class HomeScreen extends React.Component {
                     />
                     <Text style={styles.textWhite}>Do aplikácie prejdite tlačidlom</Text>
                     <Button
-                        title="Enter app"
+                        title="Enter application"
                         onPress={() => this.props.navigation.navigate('Menu')}
                         />
                 </View>
