@@ -25,22 +25,31 @@ export default class HomeScreen extends React.Component {
                     <View>
 
                         <Text style={styles.textWhite}>Encyklopedia</Text>
-                        <Button
-                            title="Informácie okolo nás"
+                        <TouchableOpacity
+                            style={styles.button}
                             onPress={() => this.props.navigation.navigate('Menu')}
-                        />
-                        <Button
-                            title="Počítačové systémy"
+                        >
+                            <Text style={styles.buttonText}> Informácie okolo nás </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.button}
                             onPress={() => this.props.navigation.navigate('Menu')}
-                        />
-                        <Button
-                            title="Počítačové siete"
+                        >
+                            <Text style={styles.buttonText}> Počítačové systémy </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.button}
                             onPress={() => this.props.navigation.navigate('Menu')}
-                        />
-                        <Button
-                            title="Algoritmy a programovanie"
+                        >
+                            <Text style={styles.buttonText}> Počítačové siete </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.button}
                             onPress={() => this.props.navigation.navigate('Menu')}
-                        />
+                        >
+                            <Text style={styles.buttonText}> Algoritmy a programovanie </Text>
+                        </TouchableOpacity>
+
                     </View>
                 </ScrollView>
             </View>
@@ -67,8 +76,19 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     button: {
-        width: 150,
-        height: 150,
+        color: '#ffffff',
+        fontSize: 30,
+        backgroundColor: '#0b0b55',
+        marginTop: 7,
+        width: 280,
+        height: 100,
+        borderColor: '#1312bb',
+        borderWidth: 2,
+    },
+    buttonText: {
+        textAlign: 'center',
+        color: '#ffffff',
+        fontSize: 35,
     },
 
 });
