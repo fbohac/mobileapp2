@@ -20,9 +20,7 @@ export default class HomeScreen extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-                    <View>
+            <View style={styles.container} contentContainerStyle={styles.contentContainer}>
                         <Image
                             source={  require('../assets/images/uvodMA.png')}
                             style={styles.welcomeImage}
@@ -33,8 +31,6 @@ export default class HomeScreen extends React.Component {
                         <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Kurz')}>
                             <Image source={require('../assets/images/kurz_button.png')}/>
                         </TouchableOpacity>
-                    </View>
-                </ScrollView>
             </View>
         );
     }
@@ -45,28 +41,23 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#222',
-        alignSelf: 'stretch',
-
-    },
-    textWhite:{
-        color: '#FFF',
+        justifyContent: 'space-between'
     },
 
     welcomeImage: {
         flex: 1,
-        width: 150,
-        height: 150,
-        alignSelf: 'center',
+        width: undefined,
+        height: undefined,
         resizeMode: 'contain',
-        marginTop: 50,
-        marginLeft: 15,
-    },
-    contentContainer: {
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    button: {
-        marginTop: 7,
     },
 
+    contentContainer: {
+        alignItems: 'center',
+        justifyContent: 'space-between'
+    },
+
+    button: {
+        marginTop: 7,
+        alignSelf: 'center',
+    },
 });

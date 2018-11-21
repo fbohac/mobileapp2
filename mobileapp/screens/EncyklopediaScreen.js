@@ -20,39 +20,37 @@ export default class HomeScreen extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
                 <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
                     <View>
 
-                        <Text style={styles.textWhite}>Encyklopedia</Text>
+                        <Text style={styles.textWhite}>Encyklopédia</Text>
                         <TouchableOpacity
                             style={styles.button}
                             onPress={() => this.props.navigation.navigate('Menu')}
                         >
-                            <Text style={styles.buttonText}> Informácie okolo nás </Text>
+                            <Text adjustsFontSizeToFit style={styles.buttonText}> Informácie okolo nás </Text>
                         </TouchableOpacity>
                         <TouchableOpacity
                             style={styles.button}
                             onPress={() => this.props.navigation.navigate('Menu')}
                         >
-                            <Text style={styles.buttonText}> Počítačové systémy </Text>
+                            <Text adjustsFontSizeToFit style={styles.buttonText}> Počítačové systémy </Text>
                         </TouchableOpacity>
                         <TouchableOpacity
                             style={styles.button}
                             onPress={() => this.props.navigation.navigate('Menu')}
                         >
-                            <Text style={styles.buttonText}> Počítačové siete </Text>
+                            <Text adjustsFontSizeToFit style={styles.buttonText}> Počítačové siete </Text>
                         </TouchableOpacity>
                         <TouchableOpacity
                             style={styles.button}
                             onPress={() => this.props.navigation.navigate('Menu')}
                         >
-                            <Text style={styles.buttonText}> Algoritmy a programovanie </Text>
+                            <Text adjustsFontSizeToFit style={styles.buttonText}> Algoritmy a programovanie </Text>
                         </TouchableOpacity>
 
                     </View>
                 </ScrollView>
-            </View>
         );
     }
 
@@ -62,10 +60,9 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#222',
-        alignSelf: 'stretch',
-
     },
     textWhite:{
+        alignSelf: 'center',
         color: '#FFF',
         fontSize: 40,
         marginTop: 40,
@@ -73,7 +70,6 @@ const styles = StyleSheet.create({
 
     contentContainer: {
         alignItems: 'center',
-        justifyContent: 'center',
     },
     button: {
         color: '#ffffff',
@@ -84,11 +80,13 @@ const styles = StyleSheet.create({
         height: 100,
         borderColor: '#1312bb',
         borderWidth: 2,
+
     },
     buttonText: {
+        fontSize: 37,
+        textAlignVertical: 'center',
         textAlign: 'center',
         color: '#ffffff',
-        fontSize: 35,
     },
 
 });

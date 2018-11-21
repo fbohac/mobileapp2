@@ -20,9 +20,7 @@ export default class HomeScreen extends React.Component {
 
   render() {
     return (
-        <View style={styles.container}>
-            <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-                <View>
+                <View style={styles.container} contentContainerStyle={styles.contentContainer}>
                     <Image
                         source={  require('../assets/images/uvodMA.png')}
                         style={styles.welcomeImage}
@@ -33,8 +31,6 @@ export default class HomeScreen extends React.Component {
                         onPress={() => this.props.navigation.navigate('Menu')}
                         />
                 </View>
-            </ScrollView>
-        </View>
     );
   }
 
@@ -44,8 +40,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#222',
-      alignSelf: 'stretch',
-
+    justifyContent: 'center',
   },
     textWhite:{
         color: '#FFF',
@@ -53,16 +48,12 @@ const styles = StyleSheet.create({
 
   welcomeImage: {
       flex: 1,
-      width: 300,
-      height: 300,
-      alignSelf: 'center',
+      width: undefined,
+      height: undefined,
       resizeMode: 'contain',
-     marginTop: 125,
-     marginLeft: 15,
   },
     contentContainer: {
         alignItems: 'center',
-        justifyContent: 'center',
     },
 
 });
